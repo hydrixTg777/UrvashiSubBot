@@ -27,14 +27,14 @@ async def start(bot, cmd):
                 ident, file_id = cmd.text.split("_-_-_-_")
                 await bot.send_message(
                     chat_id=cmd.from_user.id,
-                    text="**Please Join My Updates Channel to use this Bot!**",
-                    reply_markup=InlineKeyboardMarkup(
+                    text="**--♦️ READ THIS INSTRUCTION ♦️--\n\n🗣 നിങ്ങൾ ചോദിക്കുന്ന സിനിമകൾ നിങ്ങൾക്ക് ലഭിക്കണം എന്നുണ്ടെങ്കിൽ നിങ്ങൾ ഞങ്ങളുടെ ചാനലിൽ ജോയിൻ ചെയ്തിരിക്കണം.ജോയിൻ ചെയ്യാൻ --(📢 Join Channel 📢)-- എന്ന ബട്ടണിൽ ക്ലിക്ക് ചെയ്യാവുന്നതാണ്.\n🗣 ജോയിൻ ചെയ്ത ശേഷം --(🔄 Try Again 🔄)-- എന്ന ബട്ടണിൽ അമർത്തിയാൽ നിങ്ങൾക്ക് ഞാൻ ആ സിനിമ ഫയൽ അയച്ചു തരുന്നതാണ്..😍\n\n🗣 In Order To Get The Movie Requested By You in Our Group, You Must Have To Join Our Official Channel First By Clicking (📢 Join Channel 📢) Button.🗣 After That, Click --(🔄 Try Again 🔄)-- Button. I'll Send You That Movie File📂**",
+                reply_markup=InlineKeyboardMarkup(
                         [
                             [
-                                InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                                InlineKeyboardButton("📣 𝙹𝙾𝙸𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 📣", url=invite_link.invite_link)
                             ],
                             [
-                                InlineKeyboardButton(" 🔄 Try Again", callback_data=f"checksub#{file_id}")
+                                InlineKeyboardButton(" ⚙️ 𝚃𝚁𝚈 𝙰𝙶𝙰𝙸𝙽 ⚙️", callback_data=f"checksub#{file_id}")
                             ]
                         ]
                     ),
@@ -66,8 +66,7 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('Search again', url= 'https://t.me/slmovieshubsl'),
-                        InlineKeyboardButton('share group', url='https://telegram.me/share/url?url=https://t.me/slmovieshubsl')
+                        InlineKeyboardButton('✨️ഉർവശി തീയറ്റേഴ്‌സ്✨', url= 'https://t.me/UrvashiTheaters_links'                
                     ]
                     ]
                 await bot.send_cached_media(
@@ -86,7 +85,7 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("🤖 Join Updates Channel", url=invite_link.invite_link)
+                        InlineKeyboardButton("📣 𝙹𝙾𝙸𝙽 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 📣", url=invite_link.invite_link)
                     ]
                 ]
             )
@@ -99,15 +98,15 @@ async def start(bot, cmd):
             reply_markup=InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("Search Here", url='https://t.me/slmovieshubsl'),
-                        InlineKeyboardButton("Source Code", url='https://github.com/kalanakt/imdb-autofilter-bot'),
+                        InlineKeyboardButton("𝙻𝙸𝙽𝙺𝚂", url='https://t.me/UrvashiTheaters_links'),
+                        InlineKeyboardButton("𝙾𝚆𝙽𝙴𝚁", url='https://t.me/PowerOfTG'),
                     ],
                    [
-                       InlineKeyboardButton("Series Channel", url='https://t.me/timelytvshow'),
-                       InlineKeyboardButton("Support Group", url='https://t.me/slmovieshubsl'),
+                       InlineKeyboardButton("𝙶𝚁𝙾𝚄𝙿", url='https://t.me/UrvashiTheaters'),
+                       InlineKeyboardButton("𝚁𝙴𝚀𝚄𝙴𝚂𝚃𝚂", url='https://t.me/UrvashiTheaters_Requests'),
                     ],
                      [
-                        InlineKeyboardButton("About", callback_data="about")
+                        InlineKeyboardButton("𝚄𝙿𝙳𝙰𝚃𝙴𝚂", url="https://t.me/movies_club_2019")
                     ]
                 ]
             )
@@ -192,13 +191,3 @@ async def delete(bot, message):
         await msg.edit('File is successfully deleted from database')
     else:
         await msg.edit('File not found in database')
-@Client.on_message(filters.command('about'))
-async def bot_info(bot, message):
-    buttons = [
-        [
-            InlineKeyboardButton('Series Channel', url='https://t.me/timelytvshow'),
-            InlineKeyboardButton('Source Code', url='https://github.com/kalanakt/imdb-autofilter-bot')
-        ]
-        ]
-    
-    await message.reply(text="<b>Reverse Developer : <a href='https://t.me/kinu6'> Hash Minner</a>\nLanguage : <code>Python3</code>\nLibrary : <a href='https://docs.pyrogram.org/'>Pyrogram asyncio</a>\nSource Code : <a href='https://github.com/kalanakt/imdb-autofilter-bot'>Click here</a>\nUpdate Channel : <a href='https://t.me/series2day'>ErrorXBotz</a> </b>", reply_markup=InlineKeyboardMarkup(buttons), disable_web_page_preview=True)
