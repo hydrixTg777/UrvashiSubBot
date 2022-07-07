@@ -66,7 +66,7 @@ async def start(bot, cmd):
                     f_caption = f"{files.file_name}"
                 buttons = [
                     [
-                        InlineKeyboardButton('✨️ഉർവശി തീയറ്റേഴ്‌സ്✨', url= 'https://t.me/UrvashiTheaters_links'                
+                        InlineKeyboardButton('✨️ഉർവശി തീയറ്റേഴ്‌സ്✨', url= 'https://t.me/UrvashiTheaters_links')               
                     ]
                     ]
                 await bot.send_cached_media(
